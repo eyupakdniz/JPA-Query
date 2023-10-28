@@ -29,7 +29,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<UserDtoByNative> getUsersDtoByIdentityNumberQueryNavite(String identityNumber);
 
 
-    // Tek Bir String Değer Dönen
+    //String
     @Query("select a.firstName from users a where a.identityNumber=?1")
     String getUsersNameByIdentityNumberQueryHql(String identityNumber);
 
